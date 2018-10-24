@@ -25,7 +25,10 @@
 
 ## Some picture of this project
 
-![Test Image 1](https://github.com/aggads/recap-html-css/blob/master/assets/images/Capture.JPG)
+![Test Image 1](https://github.com/aggads/Rpg-test/blob/master/img/capture1.png)
+
+![Test Image 2](https://github.com/aggads/Rpg-test/blob/master/img/capture2.png)
+
 
 
 
