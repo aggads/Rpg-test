@@ -4,7 +4,7 @@
 
 ## What is it?
 
-> I tryed to do a rpg dialog 
+> I tryed to do a rpg dialogue
 
 ## Motivation :
 > I like rpg gaming and it was a good opportunity to test my new knowledge
