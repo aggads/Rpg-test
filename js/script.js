@@ -65,8 +65,8 @@ Joueur.combattre = function (adversaire) {
     if (adversaire.sante === 0) {
         var description = this.nom + " a tué " + adversaire.nom + " et gagne " +
             adversaire.valeur + " points d'expérience, ainsi que " +
-            adversaire.inventaire.or + " pièces d'or et " +
-            adversaire.inventaire.cles + " clé(s) </br>";
+            adversaire.inventaire.or + " pièces d'or"
+//            adversaire.inventaire.cles + " clé(s) </br>";
         this.xp += adversaire.valeur;
         // L'inventaire de la victime est transféré à son vainqueur
         this.inventaire.or += adversaire.inventaire.or;
@@ -94,7 +94,7 @@ var joueur2 = Object.create(Joueur);
 joueur2.initJoueur("Kirito", 600, 50, "Dark Repulsor", 80);
 
 var monstre = Object.create(Adversaire);
-monstre.initAdversaire("ZogZog", 1200, 20, "Orc", 50, "Giant Axe", 60);
+monstre.initAdversaire("ZogZog", 1000, 20, "Orc", 50, "Giant Axe", 60);
 
 
 
@@ -112,20 +112,28 @@ var presentation = "<p class='dialogue'>Bienvenue dans ce jeu d'aventure ! </br>
 // --- ok ---
 var introMob = "Un affreux monstre arrive : c'est un " + monstre.race + " nommé " + monstre.nom + "</br>";
 
-
 // --- ok ---
 var attaque1 = monstre.attaquer(joueur1) + monstre.attaquer(joueur2);
 
 // --- ok ---
 var attaque2 = joueur1.combattre(monstre) + joueur2.combattre(monstre);
 
+// --- ok ---
+var attaque3 = monstre.attaquer(joueur1) + monstre.attaquer(joueur2);
+
+// --- ok ---
+var attaque4 = joueur1.combattre(monstre) + joueur2.combattre(monstre);
+
+// --- ok ---
+var attaque5 = monstre.attaquer(joueur1) + monstre.attaquer(joueur2);
+
+// --- ok ---
+var attaque6 = joueur1.combattre(monstre) + joueur2.combattre(monstre);
 
 // --- ok ---
 var terminus = joueur1.finCombat() + joueur2.finCombat();
 
-
-var tab = [presentation, introMob, attaque1, attaque2, terminus];
-
+var tab = [presentation, introMob, attaque1, attaque2, attaque3, attaque4, attaque5, attaque6, terminus];
 
 
 
@@ -146,26 +154,14 @@ var tab = [presentation, introMob, attaque1, attaque2, terminus];
 //Visibilité du texte (affiché)
 var showText = document.querySelector('.dialogue');
 function show (){
-//    showText.innerHTML = tab[];
+        var test = showText.innerHTML = presentation;
 
-    for (var i = 0; i < tab.length; i++){
-        switch(tab) {
-            case 0: 
-                showText.innerHTML = tab[0];
-                break;
-            case 1:
-                showText.innerHTML = tab[1];
-                break;
-            case 2:
-                showText.innerHTML = tab[2];
-                break;
-            default:
-                reset();
-                break;
-        }
-    }
+    
     // showText.classList.add("elementToAnimate");
+    
     showText.style.visibility = "visible";
+    
+    return test;
 
 }
 
@@ -173,25 +169,62 @@ function show (){
 var resetText = document.querySelector('.dialogue');
 function reset(){
     resetText.innerHTML = presentation;
+    
+    counter = 1;
     //    resetText.classList.add("elementToAnimate");
     resetText.style.visibility = "hidden";
 }
 
 
 
-
+var counter = 1;
 
 // test affichage autre variable
 function intro (){
-    reset();
-    showText.innerHTML = introMob;
+    
+//    var test = showText.innerHTML = tab;
+    
+        console.log(tab);
+        switch(counter) {
+            case 0:
+                showText.innerHTML = tab[counter++];
+                break;
+            case 1:
+                showText.innerHTML = tab[counter++];
+                break;
+            case 2:
+                showText.innerHTML = tab[counter++];
+                break;
+            case 3:
+                showText.innerHTML = tab[counter++];
+                break;
+            case 4:
+                showText.innerHTML = tab[counter++];
+                break;
+            case 5:
+                showText.innerHTML = tab[counter++];
+                break;
+            case 6:
+                showText.innerHTML = tab[counter++];
+                break;
+            case 7:
+                showText.innerHTML = tab[counter++];
+                break;
+            case 8:
+                showText.innerHTML = tab[counter++];
+                break;
+            default:
+                break;
+        }
+    
+    
     showText.style.visibility = "visible";
-
+    
 }
 
 // reinitialisation
 function retour (){
-    showText.innerHTML = presentation;
+    showText.innerHTML = tab[--counter];
     showText.style.visibility = "visible";
 }
 
