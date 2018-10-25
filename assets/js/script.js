@@ -56,14 +56,14 @@ Joueur.decrire = function () {
 };
 // Renvoie la description du joueur (Pendant le combat)
 Joueur.finCombat = function () {
-    var description = this.nom + " a " + this.sante + " points de vies </br>";
+    var description = "Il reste " +  this.sante + " points de vies à " + this.nom + " </br>";
     return description;
 };
 // Combat un adversaire (Après le combat)
 Joueur.combattre = function (adversaire) {
     var description = this.attaquer(adversaire);
     if (adversaire.sante === 0) {
-        var description = this.nom + " a tué " + adversaire.nom + " et gagne " +
+        var description = this.nom + " a achevé " + adversaire.nom + " et gagne " +
             adversaire.valeur + " points d'expérience, ainsi que " +
             adversaire.inventaire.or + " pièces d'or"
         //            adversaire.inventaire.cles + " clé(s) </br>";
@@ -109,13 +109,15 @@ var attaque3 = monstre.attaquer(joueur1) + monstre.attaquer(joueur2);
 
 var attaque4 = joueur1.combattre(monstre) + joueur2.combattre(monstre);
 
-var attaque5 = monstre.attaquer(joueur1) + monstre.attaquer(joueur2);
+// var attaque5 = monstre.attaquer(joueur1) + monstre.attaquer(joueur2);
 
-var attaque6 = joueur1.combattre(monstre) + joueur2.combattre(monstre);
+// var attaque6 = joueur2.combattre(monstre) + joueur1.combattre(monstre);
 
 var terminus = joueur1.finCombat() + joueur2.finCombat();
 
-var tab = [presentation, introMob, attaque1, attaque2, attaque3, attaque4, attaque5, attaque6, terminus];
+// attaque5, attaque6, 
+
+var tab = [presentation, introMob, attaque1, attaque2, attaque3, attaque4, terminus];
 
 
 
@@ -169,16 +171,16 @@ function intro() {
         case 4:
             showText.innerHTML = tab[counter++];
             break;
+        // case 5:
+        //     showText.innerHTML = tab[counter++];
+        //     break;
+        // case 6:
+        //     showText.innerHTML = tab[counter++];
+        //     break;
         case 5:
             showText.innerHTML = tab[counter++];
             break;
         case 6:
-            showText.innerHTML = tab[counter++];
-            break;
-        case 7:
-            showText.innerHTML = tab[counter++];
-            break;
-        case 8:
             showText.innerHTML = tab[counter++];
             break;
         default:
