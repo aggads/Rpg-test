@@ -12,6 +12,8 @@
 
 ## About the project 
 
+> Press "A" to slide and "B" to return
+
 ### See the progress of the project
 
 > https://aggads.github.io/Rpg-test/
