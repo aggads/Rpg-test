@@ -25,9 +25,9 @@
 
 ## Some picture of this project
 
-![Test Image 1](https://github.com/aggads/Rpg-test/blob/master/img/capture1.png)
+![Test Image 1](https://github.com/aggads/Rpg-test/blob/master/assets/img/capture1.png)
 
-![Test Image 2](https://github.com/aggads/Rpg-test/blob/master/img/capture2.png)
+![Test Image 2](https://github.com/aggads/Rpg-test/blob/master/assets/img/capture2.png)
 
 
 
