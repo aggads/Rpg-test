@@ -148,7 +148,7 @@ body {
 
 body {
     /*	background-color: #e70013;*/
-        background-image: url(assets/img/background-1.jpg); 
+        background-image: url(/img/background-1.jpg); 
 /*    background-image: url(https://vignette.wikia.nocookie.net/swordartonline/images/2/24/West_Mountain_sunrise.png/revision/latest?cb=20140307032634);*/
     background-size: cover;
     overflow: hidden;
@@ -255,7 +255,7 @@ body {
     border-radius: 0.8%;
     box-shadow: 0px 0px 3px rgba(255, 255, 255, .3), inset 0px 2px 4px rgba(0, 0, 0, .2);
     background-color: black;
-        background-image: url(assets/img/Wiki-background.jpg);
+        background-image: url(/img/Wiki-background.jpg);
 /*    background-image: url(https://vignette.wikia.nocookie.net/sword-art-online-chronicles/images/5/50/Wiki-background/revision/latest?cb=20150626221644);*/
 
     background-size: cover;
@@ -575,7 +575,7 @@ body {
 .logobox {
     width: 400px;
     height: 100px;
-        background-image: url(assets/img/SAO_Logo.png);
+        background-image: url(/img/SAO_Logo.png);
 /*    background-image: url(https://vignette.wikia.nocookie.net/swordartonline/images/5/51/SAO_Logo.png/revision/latest?cb=20120402050045);*/
     background-size: contain;
     background-repeat: no-repeat;
@@ -629,7 +629,7 @@ body {
     opacity: 1;
     transition: all .2s ease-in;
     -webkit-transition: all .2s ease-in;
-        background-image: url(assets/img/SAO_Logo.png);
+        background-image: url(/img/SAO_Logo.png);
 /*    background-image: url(https://vignette.wikia.nocookie.net/swordartonline/images/5/51/SAO_Logo.png/revision/latest?cb=20120402050045);*/
     background-size: contain;
 }
